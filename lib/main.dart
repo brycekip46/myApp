@@ -1,40 +1,43 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-void main()=>runApp(MaterialApp(
-  home: Home()
-    ));
+void main() => runApp(MaterialApp(home: Home()));
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-    appBar: AppBar(
-title: const Text('Friends'),
-centerTitle: true,
-      backgroundColor: Colors.deepOrangeAccent,
+    return Scaffold(
+      appBar: AppBar(
+        title : Text("WELCOME !!"),
+  backgroundColor: Colors.greenAccent,
 
-),
-body: Center(
-  child: IconButton(
-    icon:Icon( //Icon()
-    Icons.favorite,
-    color: Colors.deepOrangeAccent,
-    size: 100.0,
-  ), onPressed: () {
-    print('you clicked me');
+      centerTitle: true,),
+      body: Row(
+        children: [
+          Expanded(
 
-  },
-),
-),
-floatingActionButton: FloatingActionButton(
-  onPressed: (){},
-  child: Text('click'),
-  backgroundColor: Colors.deepOrangeAccent,
-),
-);
+            child: Container(
 
+              child: Image.asset('Assets/hacker.jpg'),
+            ),
+          ),
+
+          Expanded(
+
+            child: Container(
+              child: Image.asset('Assets/hacker.jpg'),
+
+            ),
+          ),
+          Expanded(child: Container(
+            child: Image.asset('Assets/hacker.jpg')
+          )),
+        ],
+      ),
+    );
   }
 }
 
